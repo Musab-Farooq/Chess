@@ -65,12 +65,9 @@ Welcome to the **SFML Chess Game** — a fully interactive, two-player chess exp
 
 ## 🛠️ Requirements
 
-- A C++ compiler (e.g., g++)
-- SFML installed and linked properly
-- Resource folders:
-  - `Textures/`: All PNG and JPG sprite files
-  - `Music/`: Movement audio file (`4.mp3`)
-
+- C++ compiler (g++, clang++, MSVC)
+- Install [SFML](https://www.sfml-dev.org/download.php) and configure your compiler to link it properly.
+- Texture and audio files (included)
 ---
 
 ## ▶️ How to Run
@@ -96,12 +93,13 @@ Welcome to the **SFML Chess Game** — a fully interactive, two-player chess exp
 
 ---
 
-## ⚡ Quick Start (No Setup Required)
+## 📦 One-Click Run
+Want to try **without compiling**?
 
-> To play the game without setting up SFML:
-- Download the **ZIP file** of the compiled project.
-- Extract it.
-- Run the `chess.exe` file inside — **no installation needed!**
+- [**Download the ZIP release**](https://github.com/Musab-Farooq/Chess/blob/main/Chess.zip)  
+- Extract the folder.
+- Run the provided `.exe` file inside to launch Chess instantly!
+
 
 ---
 
