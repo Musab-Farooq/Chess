@@ -103,14 +103,12 @@ int main() {
     }
 
     Screens backgroundscreen;
-    backgroundscreen.setscreen("Textures/bg.jpg",1);
-    backgroundscreen.setbuttons(1, "Textures/backbutton.png", 250, 100, 50, 650, sf::Color::White);
+    backgroundscreen.setscreen("Textures/bg.jpg",0);
 
     Screens main;
-    main.setscreen("Textures/bg2.jpg", 1);
-    main.setbuttons(1, "Textures/button.png", 250, 100, 550, 650, sf::Color::White);
+    main.setscreen("Textures/bg2.jpg", 0);
     bool check = true;
-
+    
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -119,18 +117,12 @@ int main() {
             }
         }
         if (check) {
-            main.functionality(m, event, window);
-            check = main.screenexist(event, 1);
             main.draw(window);
         }
 
         else {
 
             backgroundscreen.functionality(m, event, window);
-            if (!backgroundscreen.screenexist(event, 1)) {
-                check = true;
-            }
-
             grid.highlight(m.getPosition().x, m.getPosition().y);
 
             for (int i = 0; i < 16; i++) {
@@ -171,6 +163,11 @@ int main() {
         
 
         window.display();
+
+        if (check) {
+            Sleep(2000);
+            check = false;
+        }
     }
 
     return 0;
