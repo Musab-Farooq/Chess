@@ -14,7 +14,7 @@ void Screens::setscreen(string path, int num)
 	screenTexture.loadFromFile(this->path);
 	screenSprite.setTexture(screenTexture);
 	screenSprite.setColor(sf::Color(255, 255, 255, 255 * 0.9));
-
+	
 	button = new Buttons[num];
 	this->numberofbuttons = num;
 }
@@ -34,7 +34,7 @@ void Screens::functionality(sf::Mouse m, sf::Event e, sf::RenderWindow& window)
 bool Screens::screenexist(sf::Event e, int n)
 {
 	if (numberofbuttons == 0) {
-		exist = false;
+		exist = true;
 		return exist;
 	}
 
