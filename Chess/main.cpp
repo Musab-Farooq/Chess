@@ -135,29 +135,28 @@ int main() {
                     rook[i].movement(event, grid.getgrid(), m, grid.getposition());
                     bishops[i].movement(event, grid.getgrid(), m, grid.getposition());
                     knight[i].movement(event, grid.getgrid(), m, grid.getposition());
-
                 }
 
                 pawn[i].movement(event, grid.getgrid(), m, grid.getposition());
             }
 
             window.clear();
-
+            
             backgroundscreen.draw(window);
             grid.draw(window);
             for (int i = 0; i < 16; i++) {
+                if (i < 2) {
+                    queen[i].draw(window);
+                    king[i].draw(window);
+                }
+
+                if (i < 4) {
+                    rook[i].draw(window);
+                    bishops[i].draw(window);
+                    knight[i].draw(window);
+                }
+
                 pawn[i].draw(window);
-            }
-
-            for (int i = 0; i < 4; i++) {
-                rook[i].draw(window);
-                bishops[i].draw(window);
-                knight[i].draw(window);
-            }
-
-            for (int i = 0; i < 2; i++) {
-                queen[i].draw(window);
-                king[i].draw(window);
             }
         }
         
